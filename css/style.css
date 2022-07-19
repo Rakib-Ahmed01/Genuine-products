@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* Common Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f8f8;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 4.375rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+p {
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  /* border: 1px solid; */
+}
+
+section {
+  margin: 3rem 0;
+}
+
+.btn {
+  display: inline-block;
+  color: white;
+  background-color: #e02c6d;
+  padding: 7px 10px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+/* Header Styling */
+
+#header .container {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+/* Main Section */
+
+/* Banner Section  */
+
+.banner .container {
+  height: 485px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid; */
+}
+.banner .container > * {
+  width: 50%;
+  /* height: 100%; */
+  /* border: 1px solid; */
+}
+
+.banner .banner-text {
+  align-content: center;
+}
+
+.banner .banner-text,
+.banner-img {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .banner-text p {
+  margin: 15px 0;
+}
+
+.banner .banner-img {
+  background: url("../images/Circle\ design.svg") no-repeat;
+  background-position: cover;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .container .banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Companies Section Styling  */
+
+.companies .container {
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.companies .container img {
+  width: 90px;
+}
+
+/* Collection Section Styling  */
+
+/* s */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.container .title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.product {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.product > * {
+  margin-bottom: 0.625rem;
+}
+
+.product img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product .name {
+  margin-bottom: 10px;
+}
+.product .price {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.ratings i {
+  color: #e02c6d;
+}
+
+.shipping-details p {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #787885;
+}
+
+.see-more {
+  text-align: right;
+}
+
+.see-more a {
+  display: inline-block;
+  color: #e02c6d;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+/* Featured Section  */
+
+.featured .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  gap: 30px;
+}
+
+.featured .container > * {
+  /* background-color: deepskyblue; */
+  padding: 10px;
+}
+
+.featured-img img {
+  height: 100%;
+  width: 98%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.featured-text {
+  grid-column: 2 / -1;
+}
+
+.featured-text p {
+  line-height: 25px;
+  margin: 10px 0;
+}
+
+/* Footer Styling
+*/
+
+footer {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 15px;
+}
+
+footer .container > * {
+  margin-bottom: 7px;
+}
+
+footer .container .socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Media Query  */
+
+@media only screen and (max-width: 688px) {
+  .banner .container {
+    flex-direction: column;
+  }
+}
