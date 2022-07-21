@@ -51,9 +51,15 @@ section {
   display: inline-block;
   color: white;
   background-color: #e02c6d;
+  border: 2px solid #e02c6d;
   padding: 7px 10px;
   border-radius: 2px;
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  color: #e02c6d;
+  background-color: white;
 }
 
 /* Header Styling */
@@ -63,6 +69,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 5px;
 }
 
 #nav-links {
@@ -71,6 +78,7 @@ section {
   justify-content: center;
   align-items: center;
   font-weight: 500;
+  /* font-size: 13px; */
 }
 
 /* Main Section */
@@ -82,10 +90,11 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid; */
+  margin-bottom: 50px;
 }
 .banner .container > * {
   width: 50%;
+  padding: 10px;
   /* height: 100%; */
   /* border: 1px solid; */
 }
@@ -100,25 +109,41 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid; */
 }
 
 .banner .banner-text p {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 .banner .banner-img {
   background: url("../images/Circle\ design.svg") no-repeat;
   background-position: cover;
-  background-size: 100% 100%;
+  background-size: 95% 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+/* .banner-img-content {
+  border: 1px solid;
+  width: 90%;
+} */
+
+.banner-img-content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .banner .container .banner-img img {
-  width: 65%;
-  height: 65%;
   object-fit: cover;
+  width: 340px;
+  display: inline-block;
+  margin: auto;
+  height: 100%;
+  padding: 15px;
 }
 
 /* Companies Section Styling  */
@@ -250,7 +275,38 @@ footer .container .socials {
 /* Media Query  */
 
 @media only screen and (max-width: 688px) {
+  .header #nav-links {
+    font-size: 10px;
+  }
   .banner .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    height: calc(300px * 2);
+  }
+  .banner .container > * {
+    width: 100%;
+  }
+
+  .banner .banner-text,
+  .banner-img {
+    align-items: flex-start;
+  }
+
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .featured .container {
+    display: block;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
